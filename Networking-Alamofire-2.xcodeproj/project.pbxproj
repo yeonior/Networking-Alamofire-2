@@ -13,6 +13,7 @@
 		A21C0DD2285BAC6B00E7F964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21C0DD0285BAC6B00E7F964 /* Main.storyboard */; };
 		A21C0DD4285BAC6E00E7F964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21C0DD3285BAC6E00E7F964 /* Assets.xcassets */; };
 		A21C0DD7285BAC6E00E7F964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A21C0DD5285BAC6E00E7F964 /* LaunchScreen.storyboard */; };
+		A21C0DDF285BB01C00E7F964 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C0DDE285BB01C00E7F964 /* NetworkManager.swift */; };
 		FDF54A379E3279FB5C8E25D4 /* Pods_Networking_Alamofire_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3CDDB7FDCCBEA213383B4D /* Pods_Networking_Alamofire_2.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		A21C0DD3285BAC6E00E7F964 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A21C0DD6285BAC6E00E7F964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A21C0DD8285BAC6E00E7F964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A21C0DDE285BB01C00E7F964 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A21C0DCA285BAC6B00E7F964 /* AppDelegate.swift */,
 				A21C0DCC285BAC6B00E7F964 /* SceneDelegate.swift */,
+				A21C0DDE285BB01C00E7F964 /* NetworkManager.swift */,
 				A21C0DCE285BAC6B00E7F964 /* ViewController.swift */,
 				A21C0DD0285BAC6B00E7F964 /* Main.storyboard */,
 				A21C0DD3285BAC6E00E7F964 /* Assets.xcassets */,
@@ -88,7 +91,6 @@
 				042BFF2802F809E5825DF9C0 /* Pods-Networking-Alamofire-2.debug.xcconfig */,
 				9A207B5AE5ED7FC0242CD6B7 /* Pods-Networking-Alamofire-2.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A21C0DDF285BB01C00E7F964 /* NetworkManager.swift in Sources */,
 				A21C0DCF285BAC6B00E7F964 /* ViewController.swift in Sources */,
 				A21C0DCB285BAC6B00E7F964 /* AppDelegate.swift in Sources */,
 				A21C0DCD285BAC6B00E7F964 /* SceneDelegate.swift in Sources */,

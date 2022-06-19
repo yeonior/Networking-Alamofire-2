@@ -10,7 +10,7 @@ import Alamofire
 
 final class NetworkManager {
     
-    typealias WebServiceResponse = ([[String: String]]?, Error?) -> Void
+    typealias ImageResponse = (UIImage) -> Void
     
     // MARK: - Properties
     static let shared = NetworkManager()
@@ -19,15 +19,22 @@ final class NetworkManager {
     private init() {}
     
     // MARK: - Methods
-    func execute(_ url: URL, completion: @escaping WebServiceResponse) {
-        
-        AF.request(url).validate().responseDecodable(of: [[String: String]].self) { response in
-            switch response.result {
-            case .success(let data):
-                completion(data, nil)
-            case .failure(let error):
-                completion(nil, error)
+    func downloadImage(_ url: URL, completion: @escaping ImageResponse) {
+        AF.request(url)
+            .validate()
+            .downloadProgress { progress in
+                print("totalUnitCount:\n", progress.totalUnitCount)
+                print("completedUnitCount:\n", progress.completedUnitCount)
+                print("fractionCompleted:\n", progress.fractionCompleted)
+                print("localizedDescription:\n", progress.localizedDescription ?? "")
+                print("---------------------------------------------")
             }
+            .response { response in
+                guard
+                    let data = response.data,
+                    let image = UIImage(data: data)
+                    else { return }
+                completion(image)
         }
     }
 }
